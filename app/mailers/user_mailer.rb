@@ -34,10 +34,29 @@ class UserMailer < ActionMailer::Base
   def status_changed(conference_registration)
     user = conference_registration.user
     conference = conference_registration.conference
-    status = Status.find_by_name(conference_registration.status_name)
+    status = Status.where(name: conference_registration.status_name).take
 
     mail :to => user.email, :subject => PREFIX + ERB.new(status.subject).result(binding) do |format|
       format.text{ render :text => ERB.new(status.mail).result(binding)}
     end
   end
+
+  def commented(abstract) #TODO ever remove
+  user = User.find(abstract.author_id)
+  conference = Conference.find(abstract.conference_id)
+  mail_subject = "Your abstracts to <%= conference.name %> have been commented"
+  mail_body = "Hello <%= user.full_name %>
+
+You've got a comment to your abstracts for <%= conference.name %>
+
+Вы получили комментарий рецензента к своим тезисам, поданным на  <%= conference.name %>
+
+-- 
+LVEE team"
+
+    mail :to => user.email, :subject => PREFIX + ERB.new(mail_subject).result(binding) do |format|
+      format.text{ render :text => ERB.new(mail_body).result(binding)}
+    end
+  end
+
 end

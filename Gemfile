@@ -1,11 +1,11 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 5.0.0'
 
-gem 'responders', '~> 2.0'
+gem 'responders'
 
-gem 'protected_attributes'
+gem 'protected_attributes_continued'
 
 gem('acts_as_versioned',
     git: 'https://github.com/technoweenie/acts_as_versioned.git')
@@ -28,7 +28,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
 gem 'country_select'
-gem 'active_scaffold'
+gem('active_scaffold',
+    git: 'https://github.com/activescaffold/active_scaffold.git')
 
 gem 'haml-rails'
 gem 'dynamic_form'

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root :to => 'main#select_lang'
 
   match 'djs/ie_fuck.js' => 'djs_css#ie_fuck', via: :all
@@ -47,7 +48,7 @@ Rails.application.routes.draw do
       resources :sites do
         as_routes
       end
-      match "/import(/:action)", controller: "import", via: :all
+      match "/import(/:action)", controller: "import", via: :all #DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.1.
       match '/conferences/registrations/:id' => "conferences#registrations", via: :all
 
       resources :menus

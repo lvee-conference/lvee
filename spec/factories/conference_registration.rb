@@ -21,7 +21,7 @@ FactoryGirl.define do
     end
 
     trait :with_badges do
-      ignore do
+      transient do
         number_of_badges 3
       end
       after :create do |cr, evaluator|
@@ -30,4 +30,3 @@ FactoryGirl.define do
     end
   end
 end
-

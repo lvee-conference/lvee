@@ -1,5 +1,5 @@
 # Load the Rails application.
-require File.expand_path('../application', __FILE__)
+require_relative 'application'
 
 # Initialize the Rails application.
-Rails.application.initialize!
+Rails.application.initialize! #DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement.

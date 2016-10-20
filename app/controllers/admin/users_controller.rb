@@ -1,7 +1,7 @@
 module Admin
   class UsersController < ApplicationController
     layout "admin"
-    before_filter :admin_required
+    before_action :admin_required
 
     def index
       @users = User.includes(:conference_registrations)

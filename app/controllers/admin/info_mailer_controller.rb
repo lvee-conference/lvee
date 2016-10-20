@@ -1,5 +1,5 @@
 class Admin::InfoMailerController < ApplicationController
-  before_filter :admin_required, :process_lists
+  before_action :admin_required, :process_lists
 
   layout "admin"
 

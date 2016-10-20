@@ -1,9 +1,9 @@
 # Controller for work with users: create(signup), update, delete, activate
 
 class UsersController < ApplicationController
-  before_filter :login_required, :only => [:current]
-  before_filter :set_common_columns_info, :only => [:edit, :update, :new, :create]
-  before_filter(:current_user_only, :unless => :admin?,
+  before_action :login_required, :only => [:current]
+  before_action :set_common_columns_info, :only => [:edit, :update, :new, :create]
+  before_action(:current_user_only, :unless => :admin?,
     :except => [:restore, :activate, :current, :new, :create])
 
   USER_EDITABLE_COLUMNS = [:password, :password_confirmation, :email, :first_name, :last_name, :country, :city,

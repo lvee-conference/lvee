@@ -1,6 +1,6 @@
 module Editor
   class MetainfosController < ApplicationController
-    before_filter :editor_required
+    before_action :editor_required
     layout "admin"
 
     COLUMNS = [:language, :page, :keywords, :description]

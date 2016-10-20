@@ -1,6 +1,6 @@
 class WikiPagesController < ApplicationController
-  before_filter :login_required, :except => [:show]
-  before_filter :load_wiki_page_by_name
+  before_action :login_required, :except => [:show]
+  before_action :load_wiki_page_by_name
 
   include DiffHelper
 

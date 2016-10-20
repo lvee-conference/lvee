@@ -1,8 +1,8 @@
 class AbstractsController < ApplicationController
-  before_filter :login_required, only: [:create, :new]
-  before_filter :check_security, except: [:index, :create, :new, :show]
-  before_filter :check_show_security, only: [:show]
-  before_filter :admin_required, only: [:publish, :unpublish]
+  before_action :login_required, only: [:create, :new]
+  before_action :check_security, except: [:index, :create, :new, :show]
+  before_action :check_show_security, only: [:show]
+  before_action :admin_required, only: [:publish, :unpublish]
 
   include DiffHelper
 

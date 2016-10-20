@@ -1,7 +1,7 @@
 module Admin
   class ConferenceRegistrationsController < ApplicationController
     layout "admin"
-    before_filter :admin_required
+    before_action :admin_required
 
     EDITABLE_COLUMNS = [:quantity, :user_type, :to_pay, :status_name, :comment]
     STATIC_COLUMNS = [:conference, :login, :avator, :phone,

@@ -1,6 +1,6 @@
 module Editor
   class ImageUploadsController < ApplicationController
-    before_filter :editor_required
+    before_action :editor_required
     layout "admin"
 
     COLUMNS = [:id, :file, :description, :size]

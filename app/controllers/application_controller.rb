@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
 
   include AuthenticatedSystem
 
-  before_filter :language_select
-  before_filter :metainfo_load
-  before_filter :site_select
+  before_action :language_select
+  before_action :metainfo_load
+  before_action :site_select
 
   protect_from_forgery # :secret => 'dc50c44338f5eba496ede18e9ea29cb1'
 

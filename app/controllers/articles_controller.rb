@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  prepend_before_filter :editor_required, :except => :show
+  prepend_before_action :editor_required, :except => :show
   layout :choose_layout
 
   include DiffHelper

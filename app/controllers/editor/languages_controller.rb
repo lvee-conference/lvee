@@ -2,7 +2,7 @@ module Editor
   class LanguagesController < ApplicationController
     include LanguageUpdateHelper
 
-    before_filter :editor_required
+    before_action :editor_required
 
     active_scaffold :language do |cfg|
       cfg.columns = [:name, :code3, :description, :published]

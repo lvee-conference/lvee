@@ -1,6 +1,6 @@
 class Admin::ImportController < ApplicationController
   layout "admin"
-  before_filter :admin_required
+  before_action :admin_required
 
   def index
   end

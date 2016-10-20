@@ -1,5 +1,5 @@
 class Admin::NotFoundRedirectsController < ApplicationController
-  before_filter :admin_required
+  before_action :admin_required
 
   active_scaffold :not_found_redirect do |conf|
     conf.columns = [:path, :target]

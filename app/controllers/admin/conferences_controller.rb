@@ -3,7 +3,7 @@ require 'pdf_export'
 
 module Admin
   class ConferencesController < ApplicationController
-    before_filter :admin_required
+    before_action :admin_required
 
     USER_CSV_COLUMNS = [:login, :full_name, :email, :country, :city, :occupation, :projects]
     REGISTRATION_CSV_COLUMNS = [:user_type, :status_name, :comment, :proposition, :quantity, :days, :meeting, :phone, :residence, :floor, :transport_to, :transport_from, :food, :tshirt, :created_at]
@@ -45,7 +45,7 @@ module Admin
     end
 
     def registrations
-      if params[:id] == 'current' and Conference.all.count > 0  
+      if params[:id] == 'current' and Conference.all.count > 0
         params[:id] = Conference.order("finish_date DESC").first.id
       end
       redirect_to admin_conference_registrations_path(conference_id: params[:id])

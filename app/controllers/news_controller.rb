@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
-  before_filter :admin_required, :only => [:publish_now]
-  before_filter :editor_required, :except => [:index, :show, :rss]
+  before_action :admin_required, :only => [:publish_now]
+  before_action :editor_required, :except => [:index, :show, :rss]
   # GET /news
   # GET /news.xml
   def index

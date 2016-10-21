@@ -1,4 +1,4 @@
-class ImageUpload < ActiveRecord::Base
+class ImageUpload < ApplicationRecord
   mount_uploader :file, ImageUploader
 
   before_validation :method => :set_image_size

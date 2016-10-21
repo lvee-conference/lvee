@@ -1,4 +1,4 @@
-class WikiPage < ActiveRecord::Base
+class WikiPage < ApplicationRecord
   include WikiPageConcern
   belongs_to :user
   self.locking_column = :version

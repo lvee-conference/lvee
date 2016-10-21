@@ -1,4 +1,4 @@
-class AbstractFile < ActiveRecord::Base
+class AbstractFile < ApplicationRecord
   mount_uploader :file, AbstractFilesUploader
 
   belongs_to :abstract

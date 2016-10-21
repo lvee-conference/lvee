@@ -2,7 +2,7 @@ require 'net/smtp'
 require 'uri'
 require 'resolv'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   EMAIL_REGEXP = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
   include UserConcern
   mount_uploader :avator, UserUploader

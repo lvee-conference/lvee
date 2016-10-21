@@ -1,4 +1,4 @@
-class Conference < ActiveRecord::Base
+class Conference < ApplicationRecord
   has_many :conference_registrations, :dependent => :destroy
   has_many :abstracts
   has_many :badges, -> { where("conference_registrations.status_name=?", APPROVED_STATUS) }, :through => :conference_registrations

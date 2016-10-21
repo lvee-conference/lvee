@@ -1,4 +1,4 @@
-class Sponsor < ActiveRecord::Base
+class Sponsor < ApplicationRecord
   mount_uploader :image, SponsorUploader
 
   validates :name, :sponsor_type, :url, :image, :presence => true

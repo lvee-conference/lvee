@@ -1,4 +1,4 @@
-class Translation < ActiveRecord::Base
+class Translation < ApplicationRecord
   belongs_to :language
 
   attr_accessible :value, :key, :pluralization_index, :language_id

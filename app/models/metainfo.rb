@@ -1,4 +1,4 @@
-class Metainfo < ActiveRecord::Base
+class Metainfo < ApplicationRecord
   validates :language, :presence => true
   validates :page, :presence => true, :uniqueness => {:scope => :language}
 

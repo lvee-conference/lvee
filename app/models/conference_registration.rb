@@ -1,4 +1,4 @@
-class ConferenceRegistration < ActiveRecord::Base
+class ConferenceRegistration < ApplicationRecord
   include ConferenceRegistrationConcern
   belongs_to :user
   belongs_to :conference

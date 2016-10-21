@@ -1,4 +1,4 @@
-class News < ActiveRecord::Base
+class News < ApplicationRecord
 
   belongs_to :user
 

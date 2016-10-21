@@ -1,4 +1,4 @@
-class Abstract < ActiveRecord::Base
+class Abstract < ApplicationRecord
   belongs_to :conference, :inverse_of => :abstracts
   belongs_to :author, :class_name => "User"
   has_and_belongs_to_many :users, :join_table => "users_abstracts", :uniq => true

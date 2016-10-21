@@ -2,7 +2,7 @@ require 'zip'
 require 'fileutils'
 require 'png_checker'
 
-class Site < ActiveRecord::Base
+class Site < ApplicationRecord
   mount_uploader :file, SiteUploader
 
   attr_accessible :default, :file, :name

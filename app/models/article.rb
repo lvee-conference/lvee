@@ -1,4 +1,4 @@
-class Article < ActiveRecord::Base
+class Article < ApplicationRecord
   include ArticleConcern
   belongs_to :user
   acts_as_versioned

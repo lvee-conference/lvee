@@ -1,4 +1,4 @@
-class Menu < ActiveRecord::Base
+class Menu < ApplicationRecord
   attr_accessible :parent_id, :path, :position, :title, :enabled
 
   scope :enabled, -> { where enabled: true }

@@ -1,4 +1,4 @@
-class AbstractComment < ActiveRecord::Base
+class AbstractComment < ApplicationRecord
   belongs_to :user
   belongs_to :abstract
 

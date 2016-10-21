@@ -1,2 +1,2 @@
-class NotFoundRedirect < ActiveRecord::Base
+class NotFoundRedirect < ApplicationRecord
 end

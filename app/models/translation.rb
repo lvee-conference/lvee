@@ -23,9 +23,9 @@ class Translation < ApplicationRecord
 
   def self.as_translations
     ts = {}
-    self.select('`key`, `value`, `language_id`').order('pluralization_index ASC').each do |t|
+    self.select('key, value, language_id').order('pluralization_index ASC').each do |t|
       v = ts[t.full_key]
-      if v
+       if v
         if v.kind_of? Array
           v << t.value
         else

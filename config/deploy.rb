@@ -3,6 +3,7 @@ require 'mina/rails'
 require 'mina/git'
 require 'mina/rvm'
 
+
 set :domain, 'lvee.org'
 set :deploy_to, "/home/lvee/engine"
 set :repository, 'https://github.com/lvee/lvee-engine.git'
@@ -12,6 +13,7 @@ set :shared_paths, ['log/', 'tmp/', 'public/']
 set :shared_files, ["config/database.yml"]
 set :user, 'lvee'
 #set :rails_env, 'production'
+
 #set :port, '22'
 #set :ssh_options, '-A'
 
@@ -27,6 +29,6 @@ task :deploy do
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
     command "#{fetch (:bundle_prefix)} rake bootstrap"
-   invoke :'rails:assets_precompile'
+    invoke :'rails:assets_precompile'
   end
 end

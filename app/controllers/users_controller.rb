@@ -2,6 +2,7 @@
 
 class UsersController < ApplicationController
   before_filter :login_required, :only => [:current]
+  before_filter :access_reggistration
   before_filter :set_common_columns_info, :only => [:edit, :update, :new, :create]
   before_filter(:current_user_only, :unless => :admin?,
     :except => [:restore, :activate, :current, :new, :create])
@@ -80,15 +81,19 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-    user_conference_registrations = ConferenceRegistration.for_user(@user.id).to_a
+    user_conference_registrations = ConferenceRegistration.for_user(@user.id)
     now = Time.now
-    s = user_conference_registrations.group_by do |r|
-      r.conference.finish_date &&
-        r.conference.finish_date.to_time < now &&
-        r.status != 'canceled'
+    @participated_conferences = []
+    @current_registrations = []
+    user_conference_registrations.each do |r|
+      date = r.conference.finish_date && (r.conference.finish_date.to_time < now)
+      status = (r.status_name == NEW_STATUS) || (r.status_name == APPROVED_STATUS)
+      if date && status
+        @participated_conferences << r
+      elsif !date && status
+        @current_registrations << r
+      end
     end
-    @participated_conferences = s[true] || []
-    @current_registrations = s[false] || []
     @available_conferences = Conference.available_conferences(user_conference_registrations.map {|c|  c.conference})
   end
 
@@ -118,6 +123,12 @@ class UsersController < ApplicationController
     return if performed?
     render :text => t('message.common.access_denied'), :status=>403 unless params[:id].to_s == current_user.id.to_s
   end
+
+def access_reggistration
+   if logged_in? && (action_name=="new")
+     render :text => t('message.common.access_denied'), :status=>403
+   end
+end
 
   def after_create_save(record)
     self.current_user = record

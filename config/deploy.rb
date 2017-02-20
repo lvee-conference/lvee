@@ -12,7 +12,7 @@ set :branch, ENV['BRANCH'] || 'master'
 set :app_path,   "#{fetch(:current_path)}"
 
 set :shared_paths, ['log/', 'tmp/', 'public/']
-set :shared_files, ["config/database.yml"]
+set :shared_files, ["config/database.yml", "config/initializers/constants.rb", "config/environments/production.rb"]
 
 #set :rails_env, 'production'
 #set :port, '22'

@@ -3,24 +3,23 @@ require 'mina/rails'
 require 'mina/git'
 require 'mina/rvm'
 
-
-set :domain, 'lvee.org'
-set :deploy_to, "/home/lvee/engine"
+set :domain, ENV['DOMAIN'] || 'lvee.org'
+set :user, ENV['REMOTE_USER'] || 'lvee'
+set :deploy_to, "/home/#{fetch(:user)}/engine"
 set :repository, 'https://github.com/lvee/lvee-engine.git'
+set :branch, ENV['BRANCH'] || 'master'
+
 set :app_path,   "#{fetch(:current_path)}"
-set :branch, 'master'
+
 set :shared_paths, ['log/', 'tmp/', 'public/']
 set :shared_files, ["config/database.yml"]
-set :user, 'lvee'
-#set :rails_env, 'production'
 
+#set :rails_env, 'production'
 #set :port, '22'
 #set :ssh_options, '-A'
 
 task :environment do
-	#queue "echo 'test'"
-  #command "cat #{fetch(:app_path)}/.ruby-version"
-  invoke :'rvm:use', 'ruby-2.3.3@default'
+  invoke :'rvm:use', ENV['RUBY'] || 'ruby-2.3.3@default'
 end
 
 task :deploy do

@@ -73,7 +73,7 @@ class ConferenceRegistrationsController < ApplicationController
     if action_name=="new"
       conference = Conference.find(params[:conference_id])
       if conference.finish_date.to_time < Time.now || !conference.registration_opened ||
-        !ConferenceRegistration.where('`conference_id` = ? AND `user_id` = ?', params[:conference_id], params[:user_id]).nil?
+        ConferenceRegistration.where('`conference_id` = ? AND `user_id` = ?', params[:conference_id], params[:user_id]).nil?
         render :text => t('message.common.access_denied'), :status=>403
       end
     elsif action_name=="edit"

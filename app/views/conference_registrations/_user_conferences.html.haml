@@ -18,10 +18,8 @@
       %p{class: type}
         = link_to(t(title, :conference => conf.name), |
           edit_user_conference_registration_path(user_id: @user, id: reg),  :class => "big-button")
-
-        - if reg.approved? and reg.filled?
-          = link_to(t("label.conference_registration.badges"), |
-            badges_user_conference_registration_path(user_id: @user, id: reg), class: "big-button")
+        = link_to(t("label.conference_registration.badges", :conference => conf.name), |
+          badges_user_conference_registration_path(user_id: @user, id: reg), class: "big-button")
         = link_to(t("label.conference_registration.cancel_registration"), |
           cancel_user_conference_registration_path(user_id: @user, id: reg), |
           data:{confirm: t("message.common.sure")})
@@ -33,4 +31,3 @@
       - conf = reg.conference
       %li
         = "#{conf.name} (#{format_date(conf.start_date)} - #{format_date(conf.finish_date)})"
-

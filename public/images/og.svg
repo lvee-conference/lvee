@@ -13,7 +13,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.92.1 r15371"
    width="600"
-   height="315"
+   height="600"
    version="1.0"
    sodipodi:docname="og.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
@@ -96,9 +96,9 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="2.86"
-     inkscape:cx="300"
-     inkscape:cy="265.52618"
+     inkscape:zoom="1.88"
+     inkscape:cx="207.51748"
+     inkscape:cy="261.85485"
      inkscape:window-x="0"
      inkscape:window-y="49"
      inkscape:current-layer="lvee_logo_green_white"
@@ -107,23 +107,23 @@
      showgrid="false"
      inkscape:window-maximized="1" />
   <g
-     id="g4524">
+     id="g4513">
     <rect
-       y="1.2116113e-06"
+       y="1.4523811e-06"
        x="1.1157347e-06"
-       height="315"
+       height="600"
        width="600"
        id="rect4514"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
-       y="187"
+       y="472"
        x="4.6857139e-07"
        height="128"
        width="128"
        id="rect824"
        style="opacity:0;fill:#009933;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
-       transform="matrix(0.5,0,0,0.50000001,115,-95.511096)"
+       transform="matrix(0.80000001,0,0,0.80000001,3.9999993,-105.61775)"
        id="g3875">
       <g
          id="g3871"

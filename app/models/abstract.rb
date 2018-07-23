@@ -44,10 +44,11 @@ class Abstract < ActiveRecord::Base
   end
 
   def show_abstract?
-    unless current_user.nil?
-      return is_author?(current_user) || current_user.reviewer? || !Conference.finished.find(self.conference_id).nil?
-    end
-    !Conference.finished.find(self.conference_id).nil?
+    # unless current_user.nil?
+    #   return is_author?(current_user) || current_user.reviewer? || !Conference.finished.find(self.conference_id).nil?
+    # end
+    # !Conference.finished.find(self.conference_id).nil?
+    true
   end
 
 end

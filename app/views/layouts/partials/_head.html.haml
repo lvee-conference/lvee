@@ -26,8 +26,8 @@
   %meta{name: "description", content: @metainfo.description}
   %meta{name: "author", content: "#{SITE_TITLE}"}
 
-  %meta{name: "theme-color", content: "#{CHROME_TAB_COLOR}"}
-  %meta{name: "msapplication-TileColor", content: "#009933"}
+  %meta{name: "theme-color", content: "#{MOBILE_COLOR}"}
+  %meta{name: "msapplication-TileColor", content: "#{MOBILE_COLOR}"}
   %meta{name: "msapplication-TileImage", content: "/mstile-144x144.png"}
   %meta{name: "theme-color", content: "#ffffff"}
   %meta{name: "apple-mobile-web-app-title", content: "#{SITE_TITLE}"}
@@ -39,7 +39,7 @@
   %link{rel: "icon", type: "image/png", sizes: "192x192", href: "/android-chrome-192x192.png"}
   %link{rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png"}
   %link{rel: "manifest", href: "/site.webmanifest"}
-  %link{rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#009933"}
+  %link{rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#{MOBILE_COLOR}"}
 
   = stylesheet_link_tag "application", :debug => Rails.env.development?
   = stylesheet_link_tag "print", :media => "print"

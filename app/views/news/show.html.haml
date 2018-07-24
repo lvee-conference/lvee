@@ -1,6 +1,7 @@
 %h1=h @news.title
 
-%p.news_date=format_date(@news.created_at)
+%p.news_date= format_date(@news.created_at)
+%p.avail_translations= translations_article(@news) #text-align: right;margin-top: -2.7em;
 %p.abstract= textilize_without_paragraph(@news.lead)
 .texttext= textilize(@news.body)
 %p.author

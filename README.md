@@ -29,6 +29,10 @@ Ruby Gems:
     gem install bundler
     bundle install
 
+More information:
+    
+   [install](https://github.com/lvee/lvee-engine/blob/master/doc/install.textile) and [configure](https://github.com/lvee/lvee-engine/blob/master/doc/configure.textile)
+
 License
 -------
 

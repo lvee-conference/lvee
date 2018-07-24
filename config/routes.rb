@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "call/search/:word" => 'call#search'
+  get "call/current_conference" => 'call#current_conference'
+
   root :to => 'main#select_lang'
 
   match 'djs/ie_fuck.js' => 'djs_css#ie_fuck', via: :all
@@ -9,7 +12,7 @@ Rails.application.routes.draw do
 
   scope "/:lang", constraints: {lang: /[a-z]{2}/} do
     get '/' => redirect('/%{lang}/main')
-    
+
     namespace :admin do
       get "/info_mailer" => 'info_mailer#index'
       get "/users/:to_list/mail" => 'info_mailer#index', as: "mail_user"

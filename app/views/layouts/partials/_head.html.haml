@@ -5,7 +5,7 @@
   %meta{property: "og:locale", content: "#{LOCALE_MAP[params[:lang]]}"}
   %meta{property: "og:title", content: "#{SITE_FULL_TITLE}"}
   %meta{property: "og:type", content: "website"}
-  %meta{property: "og:url", content: "#{request.base_url}"}
+  %meta{property: "og:url", content: "#{request.original_url}"}
   %meta{property: "og:image", content: "#{request.base_url}/images/og.png"}
   %meta{property: "og:image:secure_url", content: "#{request.base_url}/images/og.png"}
   %meta{property: "og:image:type", content: "image/png"}

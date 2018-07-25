@@ -8,11 +8,18 @@ set :user, ENV['REMOTE_USER'] || 'lvee'
 set :deploy_to, "/home/#{fetch(:user)}/engine"
 set :repository, 'https://github.com/lvee/lvee-engine.git'
 set :branch, ENV['BRANCH'] || 'master'
+set :keep_releases, 2
 
 set :app_path,   "#{fetch(:current_path)}"
 
-set :shared_paths, ['log/', 'tmp/', 'public/']
-set :shared_files, ["config/database.yml", "config/initializers/constants.rb", "config/environments/production.rb"]
+set :shared_paths, ["log/", "tmp/", "public/"]
+set :shared_files, [
+    "config/puma.rb",
+    "config/database.yml",
+    "config/initializers/constants.rb",
+    "config/initializers/google_parameters.rb",
+    "config/environments/production.rb"
+]
 
 #set :rails_env, 'production'
 #set :port, '22'

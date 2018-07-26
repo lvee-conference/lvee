@@ -23,6 +23,11 @@ LANGUAGE_MAP = {
   "ua" => "uk"
 }
 
+LOCALE_MAP = {
+    "ru" => "ru_RU",
+    "en" => "en_US"
+}
+
 # Diff stuff
 INS_STYLE = "background-color: #AAFFAA; text-decoration:none;"
 DEL_STYLE = "background-color: #FF9999; text-decoration:none;"

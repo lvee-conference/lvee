@@ -43,6 +43,9 @@ STATISTICS_TYPES = [
 ]
 
 TRANSPORT = %w(bus_minsk independent)
+AGE = %w(18–24 25–34 35–44 45–54 55–64 65_and_older)
+POSITION = %w(developer/tester system_administrator devops manager director/business_owner other)
+KNOWN = %w(was_last_year e-mail_delivery news_on_the_site social_networks post_of_a_friend called_a_friend found_on_search other)
 
 SPONSOR_TYPES = [
   ["sponsor", "sponsors"],

@@ -5,9 +5,10 @@ class ConferenceRegistrationsController < ApplicationController
 
   EDITABLE_COLUMNS = [:days, :meeting, :phone, :floor, :transport_to, :transport_from,
                       :residence, :food, :tshirt]
+  ADDITIONAL_COLUMNS = [:age, :position, :experience, :known_conf, :known_conf_comment]
   STATIC_COLUMNS = [:proposition, :quantity]
   HIDDEN_COLUMNS = [:conference_id]
-  COLUMNS = STATIC_COLUMNS + EDITABLE_COLUMNS
+  COLUMNS = STATIC_COLUMNS + EDITABLE_COLUMNS + ADDITIONAL_COLUMNS
 
   LOCALIZATION_LABEL_PREFIX = "label.conference_registration."
   LOCALIZATION_DESCRIPTION_PREFIX = "description.conference_registration."
@@ -21,7 +22,7 @@ class ConferenceRegistrationsController < ApplicationController
     conf.columns = cls::COLUMNS
     conf.create.columns = cls::FIRST_STEP_COLUMNS + cls::HIDDEN_COLUMNS
 
-    conf.update.columns = cls::STATIC_COLUMNS + cls::EDITABLE_COLUMNS
+    conf.update.columns = cls::STATIC_COLUMNS + cls::EDITABLE_COLUMNS + cls::ADDITIONAL_COLUMNS
     cls::STATIC_COLUMNS.each do |c|
       conf.columns[c].form_ui = :static if self.update.columns[c]
     end

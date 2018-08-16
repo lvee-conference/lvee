@@ -65,4 +65,37 @@ module ConferenceRegistrationsHelper
     select("record", "transport_to",  transport_options(:to))
   end
 
+  def age_options
+    values = AGE.map do |i|
+      [t("label.conference_registration.age.#{i}"), i]
+    end
+    values = [[t("label.common._select_"), ""]] + values
+  end
+
+  def age_form_column(record, input_name)
+    select("record", "age",  age_options)
+  end
+
+  def position_options
+    values = POSITION.map do |i|
+      [t("label.conference_registration.position.#{i}"), i]
+    end
+    values = [[t("label.common._select_"), ""]] + values
+  end
+
+  def position_form_column(record, input_name)
+    select("record", "position",  position_options)
+  end
+
+  def known_conf_options
+    values = KNOWN.map do |i|
+      [t("label.conference_registration.known_conf.#{i}"), i]
+    end
+    values = [[t("label.common._select_"), ""]] + values
+  end
+
+  def known_conf_form_column(record, input_name)
+    select("record", "known_conf",  known_conf_options)
+  end
+
 end

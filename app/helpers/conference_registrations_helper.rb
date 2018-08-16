@@ -67,7 +67,7 @@ module ConferenceRegistrationsHelper
 
   def age_options
     values = AGE.map do |i|
-      [t("label.conference_registration.age.#{i}"), i]
+      [t("label.conference_registration.age_list.#{i}"), i]
     end
     values = [[t("label.common._select_"), ""]] + values
   end
@@ -78,7 +78,7 @@ module ConferenceRegistrationsHelper
 
   def position_options
     values = POSITION.map do |i|
-      [t("label.conference_registration.position.#{i}"), i]
+      [t("label.conference_registration.position_list.#{i}"), i]
     end
     values = [[t("label.common._select_"), ""]] + values
   end

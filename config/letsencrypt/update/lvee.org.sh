@@ -7,8 +7,8 @@
     --rsa-key-size 4096 \
     -d lvee.org \
     -d www.lvee.org \
+    -d mail.lvee.org \
     -d lists.lvee.org \
-    -d www.lists.lvee.org \
     -d summer.lvee.org \
     -d winter.lvee.org \
     --pre-hook 'systemctl stop nginx' \

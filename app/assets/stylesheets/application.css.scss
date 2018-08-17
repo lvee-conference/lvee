@@ -380,11 +380,6 @@ div.border-news.first {
     text-decoration: none;
 }
 
-.articles code {
-    display: block;
-    overflow: auto;
-}
-
 .button-join {
     float: right;
     padding: 20px 0 0 0;
@@ -463,7 +458,7 @@ li.friend li a {
 
 #footer-box {
     background: #e4e4e5 url(../images/bg-footer.png) repeat-x top left;
-    height: 465px;
+    height: 100%;
 }
 
 #footer-menu {

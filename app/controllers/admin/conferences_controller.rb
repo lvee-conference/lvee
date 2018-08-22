@@ -6,7 +6,7 @@ module Admin
     before_filter :admin_required
 
     USER_CSV_COLUMNS = [:login, :full_name, :email, :country, :city, :occupation, :projects]
-    REGISTRATION_CSV_COLUMNS = [:user_type, :status_name, :comment, :proposition, :quantity, :days, :meeting, :phone, :residence, :floor, :transport_to, :transport_from, :food, :tshirt, :created_at]
+    REGISTRATION_CSV_COLUMNS = [:age, :position, :user_type, :status_name, :comment, :proposition, :quantity, :days, :meeting, :phone, :residence, :floor, :transport_to, :transport_from, :food, :tshirt, :created_at]
 
     layout "admin"
 

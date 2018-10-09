@@ -52,6 +52,7 @@ SPONSOR_TYPES = [
   ["technical", "technical_sponsor"],
   ["information", "information_sponsor"],
   ["tech_partner", "technical_partner"],
+  ["hidden", "hidden"],
 ]
 
 DEFAULT_LICENSE = "Creative Commons Attribution-ShareAlike 3.0"

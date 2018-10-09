@@ -1,6 +1,6 @@
 - sponsors = Sponsor.list
 %ul.friends
-  - SPONSOR_TYPES.each do |type|
+  - SPONSOR_TYPES[0...-1].each do |type|
     %li.friend
       = link_to(t("sidebar.#{type[1]}"), article_by_name_path(:category => "sponsors", :name => "index"), :class => 'friend-header')
       %ul

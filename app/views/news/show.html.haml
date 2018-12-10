@@ -6,8 +6,6 @@
 %p.author
   %b= "#{t('label.news.author')}:"
   =h @news.user.full_name
-:plain
-  <g:plusone size="medium"></g:plusone>
 
 = render('news/editor_actions', :news => @news) if editor?
 %p= link_to t('label.news.back_to_list'), news_item_index_path

@@ -19,13 +19,7 @@
     $(function(){
     $.datepicker.setDefaults($.datepicker.regional['#{I18n.locale}']);
     });
-:javascript
-  (function() {
-    window.___gcfg = {lang: '<%= session[:lang] %>'};
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
+
 :javascript
   $(document).ready(function(){
     $('.textile_form').markItUp(myTextileSettings);

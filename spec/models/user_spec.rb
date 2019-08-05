@@ -75,7 +75,7 @@ describe User do
   end
 
   describe 'remember_me' do
-    let(:user) { FactoryGirl.build(:user) }
+    let(:user) { FactoryBot.build(:user) }
 
     it 'should set remember_token_expires_at' do
       user.should_receive(:remember_token_expires_at=)
@@ -94,7 +94,7 @@ describe User do
   end
 
   describe 'forget_me' do
-    let(:user) { FactoryGirl.build(:user) }
+    let(:user) { FactoryBot.build(:user) }
     it 'should clear remember_token_expires_at' do
       user.should_receive(:remember_token_expires_at=).with(nil)
       user.forget_me

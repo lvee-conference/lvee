@@ -7,8 +7,8 @@ describe UsersController do
     stub_model(User, stubs)
   end
 
-  let(:user) { FactoryGirl.create(:user) }
-  let(:admin) { FactoryGirl.create(:user, :admin) }
+  let(:user) { FactoryBot.create(:user) }
+  let(:admin) { FactoryBot.create(:user, :admin) }
 
   describe 'activate' do
     it 'should activate user for specified code' do

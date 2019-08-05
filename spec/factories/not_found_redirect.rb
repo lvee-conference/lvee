@@ -1,9 +1,8 @@
-require 'factory_girl'
+require 'factory_bot'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :not_found_redirect do
-    path "not_found"
-    target "new/target/page"
+    path {"not_found"}
+    target {"new/target/page"}
   end
 end
-

@@ -1,13 +1,12 @@
-require 'factory_girl'
+require 'factory_bot'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :language do
     trait :en do
-      name 'en'
-      description 'English'
-      published true
-      code3 'eng'
+      name {'en'}
+      description {'English'}
+      published {true}
+      code3 {'eng'}
     end
   end
 end
-

@@ -135,7 +135,7 @@ describe ApplicationController do
 
   context "#not_found_error_handler" do
     it "should redirect to new path if redirect exists" do
-      red = FactoryGirl.create(:not_found_redirect)
+      red = FactoryBot.create(:not_found_redirect)
       @controller.request.should_receive(:path).and_return("/be/#{red.path}")
       @controller.should_receive(:redirect_to).with("/be/#{red.target}")
       @controller.instance_eval do

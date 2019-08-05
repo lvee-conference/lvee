@@ -48,7 +48,7 @@ Spork.each_run do
     SimpleCov.start 'rails'
   end
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
-  FactoryGirl.reload
+  FactoryBot.reload
 end
 
 

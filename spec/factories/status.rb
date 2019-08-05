@@ -1,24 +1,23 @@
-require 'factory_girl'
+require 'factory_bot'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :status do
     trait :new do
-      name NEW_STATUS
-      mail "New Mail"
-      subject "New subject"
+      name {NEW_STATUS}
+      mail {"New Mail"}
+      subject {"New subject"}
     end
 
     trait :approved do
-      name APPROVED_STATUS
-      mail "Approved Mail"
-      subject "Approved Subject"
+      name {APPROVED_STATUS}
+      mail {"Approved Mail"}
+      subject {"Approved Subject"}
     end
 
     trait :cancelled do
-      name CANCELLED_STATUS
-      mail "Cancelled mail"
-      subject "Cancelled Subject"
+      name {CANCELLED_STATUS}
+      mail {"Cancelled mail"}
+      subject {"Cancelled Subject"}
     end
   end
 end
-

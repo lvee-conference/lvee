@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe AbstractsController do
 
-  let(:user) { FactoryGirl.create :user }
-  let(:conference) {FactoryGirl.create :conference, :in_future}
-  let(:conference_registration) {FactoryGirl.build(:conference_registration)}
+  let(:user) { FactoryBot.create :user }
+  let(:conference) {FactoryBot.create :conference, :in_future}
+  let(:conference_registration) {FactoryBot.build(:conference_registration)}
 
   def valid_create_attributes
     valid_attributes.
@@ -23,7 +23,7 @@ describe AbstractsController do
 
   before do
     login_as user
-    # @conference_registration = FactoryGirl.create(:conference_registration)
+    # @conference_registration = FactoryBot.create(:conference_registration)
   end
 
   describe "GET index" do

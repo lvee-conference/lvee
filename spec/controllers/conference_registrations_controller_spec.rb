@@ -5,9 +5,9 @@ describe ConferenceRegistrationsController do
 
   #Delete this example and add some real ones
   it "should show new page" do
-    user = FactoryGirl.create :user, :admin
+    user = FactoryBot.create :user, :admin
 
-    conference = FactoryGirl.create :conference, :in_future
+    conference = FactoryBot.create :conference, :in_future
 
     login_as user
 

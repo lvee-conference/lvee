@@ -1,10 +1,10 @@
-require 'factory_girl'
+require 'factory_bot'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :conference_registration do
     conference
     user
-    quantity 1
+    quantity {1}
 
     trait :cancelled do
       status {create(:status, :cancelled)}
@@ -16,8 +16,8 @@ FactoryGirl.define do
 
     trait :approved do
       status {create(:status, :approved)}
-      transport_from "Some"
-      transport_to "Some"
+      transport_from {"Some"}
+      transport_to {"Some"}
     end
 
     trait :with_badges do
@@ -25,9 +25,8 @@ FactoryGirl.define do
         number_of_badges 3
       end
       after :create do |cr, evaluator|
-        FactoryGirl.create_list :badge, evaluator.number_of_badges, conference_registration: cr
+        FactoryBot.create_list :badge, evaluator.number_of_badges, conference_registration: cr
       end
     end
   end
 end
-

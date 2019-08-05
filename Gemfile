@@ -45,7 +45,7 @@ group :test, :development do
   gem 'webrat'
   gem 'spork'
   gem 'watchr'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'simplecov', require: false
   gem 'coveralls', require: false
   gem 'shoulda-matchers'

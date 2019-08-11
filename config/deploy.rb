@@ -25,7 +25,7 @@ set :shared_files, [
 #set :port, '22'
 #set :ssh_options, '-A'
 
-task :environment do
+task :remote_environment do
   invoke :'rvm:use', ENV['RUBY'] || 'ruby-2.3.3@default'
 end
 
@@ -34,7 +34,7 @@ task :deploy do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
-    command "#{fetch (:bundle_prefix)} rake bootstrap"
+    # command "#{fetch (:bundle_prefix)} rake bootstrap"
     invoke :'rails:assets_precompile'
   end
 end

@@ -66,3 +66,6 @@ SITE_TITLE = ENV['TITLE'] || "LVEE"
 SITE_FULL_TITLE = ENV['FULL_TITLE'] || "Linux Vacation/Eastern Europe"
 INFO_MAIL = ENV['EMAIL'] || "info@lvee.org"
 MOBILE_COLOR = ENV['MOBILE_COLOR'] || "#009933"
+
+
+EVENTSME = {:id => "", :tickets => {:room => [], :floor => []}}

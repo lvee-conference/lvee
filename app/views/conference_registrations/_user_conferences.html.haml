@@ -16,8 +16,15 @@
       - type = (reg.approved? ? (reg.filled? ? "edit" : "approved_edit") : "edit")
       - title = "label.conference_registration." + type
       %p{class: type}
-        = link_to(t(title, :conference => conf.name), |
-          edit_user_conference_registration_path(user_id: @user, id: reg),  :class => "big-button")
+        %table
+          %tr
+            %td= link_to(t(title, :conference => conf.name), |
+              edit_user_conference_registration_path(user_id: @user, id: reg),  :class => "big-button")
+            - if reg.filled? && reg.quantity != reg.to_pay
+              %td
+                = link_to("Купить билет", "#", :onclick => "eventsmeShowWidget(#{EVENTSME[:id]})")
+                = javascript_include_tag("https://www.eventsme.by/widget.js")
+
         = link_to(t("label.conference_registration.badges", :conference => conf.name), |
           badges_user_conference_registration_path(user_id: @user, id: reg), class: "big-button")
         = link_to(t("label.conference_registration.cancel_registration"), |

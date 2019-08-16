@@ -647,3 +647,10 @@ del {background-color: #fcc;}
 #avatar img {
     width: 150px;
 }
+
+a.buy{
+  background: transparent url(/images/money-16.png) no-repeat;
+  padding: 2px 0 2px 18px;
+}
+
+table.conference_registration td:nth-child(even) { width: 100%; }

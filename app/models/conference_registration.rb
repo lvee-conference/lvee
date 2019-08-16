@@ -65,6 +65,10 @@ class ConferenceRegistration < ActiveRecord::Base
       !self.transport_from.blank?
   end
 
+  def need_to_pay?
+    (self.quantity - (self.user_type != 'normal' ? 1 : 0)) > self.to_pay.to_i
+  end
+
   #def self.participants(conference)
   #  ConferenceRegistration.where("conference_id = ? AND (status_name = ? OR status_name = ?)", conference, NEW_STATUS, APPROVED_STATUS).
   #  includes(:user).

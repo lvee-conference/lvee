@@ -12,12 +12,23 @@
 *= require markitup
 */
 
+@font-face {
+    font-family: 'HelveticaNeueCyrillic';
+    src: url('../fonts/HelveticaNeueCyrillic-light.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/HelveticaNeueCyrillic-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/HelveticaNeueCyrillic-light.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/HelveticaNeueCyrillic-light.woff2') format('woff2'), /* Modern Browsers */
+        url('../fonts/HelveticaNeueCyrillic-light.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/HelveticaNeueCyrillic-light.svg#Bizon') format('svg'); /* Legacy iOS */
+    font-weight:normal;
+    font-style:normal;
+}
 
 body {
     color: #5d6267;
     background: #eeeeef url(../images/bg-header.png) repeat-x top left;
     font-size: 100%;
-    font-family: Arial, "DejaVu Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+    font-family: HelveticaNeueCyrillic, Helvetica, Arial, "DejaVu Sans", "Lucida Sans Unicode", Verdana, sans-serif;
     font-size: 13px;
 }
 

@@ -171,7 +171,8 @@ lt:
   menu:
     conference:
       about: Apie
-      attribution_winter: Atributika
+      logo: Atributika
+      logo_winter: Atributika
       history: LVEE istorija
       payment: Mokėjimai
       payment_winter: Mokėjimai

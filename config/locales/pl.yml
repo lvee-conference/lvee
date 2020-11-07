@@ -130,8 +130,11 @@ pl:
         You can use "textile":http://www.textism.com/tools/textile/ mark-up or plain text.
     conference_registration:
       days: W które dni planujecie Państwo uczestniczyć?
-      floor: Jeśli jedziesz własnym samochodem i chcesz mieć towarzystwo, dodaj swój
-        numer telefonu i maila do listy http://lvee.org/en/wiki_pages/%5B2013%5D%20Passing%20cars
+      floor: "Niektórzy uczestnicy LVEE wolą mieszkać w namiotach zamiast tradycyjnych
+        pomieszczeń, aby uzyskać bardziej przejrzyste doświadczenie podczas zwiedzania.
+        Życie w namiocie powoduje również znacznie małą opłatę rejestracyjną. Proszę
+        odwiedź\r\n\"Strona namiotowa\":https://lvee.org/ru/wiki_pages/%5B2017%5D%20%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%BA%D0%B8
+        w celu uzyskania szczegółowych informacji."
       food: Jakie są Państwa upodobania w jedzeniu?
       index: Rejestracja na konferencje
       meeting: Czy potrzeba Państwo spotkać?
@@ -217,8 +220,7 @@ pl:
     conference_registration:
       cancel_registration: Cancel registration
       days: Dni uczestnictwa
-      floor: Zaznacz jeżeli masz własny transport i chcesz udostępnić miejsca w swoim
-        aucie innym osobom (carpooling)
+      floor: Proszę zaznaczyć, czy chcesz żyć w namiocie z obniżoną opłatą za uczestnictwo
       food: Upodobania w jedzeniu
       index: Rejestracja na konferencję
       meeting: Czy potrzeba Państwo spotkać?
@@ -336,8 +338,8 @@ pl:
       users: Zarządzanie użytkownikami
     conference:
       about: O konferencji
-      attribution: Atrybucja
-      attribution_winter: Atrybucja
+      logos: Atrybucja
+      logos_winter: Atrybucja
       history: Historia
       payment: Opłaty
       payment_winter: Opłaty
@@ -385,8 +387,11 @@ pl:
       list_14: 'Uczestnicy konferencji '
       list_14_2: Uczestnicy konferencji
       list_15: Uczestnicy konferencji
+      list_2018: Uczestnicy konferencji
       list_winter_16: Uczestnicy konferencji
+      list_winter_2018: Uczestnicy konferencji
       profile: Profil
+      spisok: Uczestnicy konferencji
       title: Uczestnicy
       volunteers: Wolontariuszy
       winter_12: Uczestnicy konferencji

@@ -66,8 +66,8 @@ sk:
   menu:
     conference:
       about: O konferencii
-      attribution: Atribúty
-      attribution_winter: Atribúty
+      logos: Atribúty
+      logos_winter: Atribúty
       history: História
       payment: Platba
       payment_winter: Platba
@@ -81,7 +81,7 @@ sk:
       organizers: Organizátori
       title: Kontakt
     main:
-      title: Aktuality
+      title: Hlavná stránka
     reports:
       about: O prednáškach
       abstract: Pokyny autorom
@@ -109,8 +109,11 @@ sk:
       list_14: 'Zoznam '
       list_14_2: Zoznam
       list_15: Zoznam
+      list_2018: Zoznam
       list_winter_16: Zoznam
+      list_winter_2018: Zoznam
       profile: Profil
+      spisok: Zoznam
       title: Účastníci
       volunteers: Dobrovoľníci
       wiki: Wiki

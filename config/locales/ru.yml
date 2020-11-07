@@ -199,13 +199,11 @@ ru:
       license: (Выбрать лицензию можно, посетив "creativecommons.org":http://creativecommons.org/choose/)
     conference_registration:
       days: В какие дни вы планируете присутствовать?
-      floor: 'Некоторые участники LVEE предпочитают жить в палатках, а не в домиках,
-        арендуемых оргкомитетом у турбазы. Это дает рафинированные туристские впечатления,
-        а также большую скидку в оргвзносе. Посетите страницу "Палатки":https://lvee.org/ru/wiki_pages/%5B2016%5D%20%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%BA%D0%B8,
-        чтобы узнать подробности. '
+      floor: Некоторые участники LVEE, имеющие туристический опыт, предпочитают проживание
+        в собственных палатках. При этом сумма оргвзноса уменьшается в два раза.
       food: Ваши предпочтения в еде (вегетарианство и др.)?
       index: Регистрация на конференцию
-      meeting: Вас встретить? Где и во-сколько?
+      meeting: Вас встретить? Где и во сколько?
       phone: Телефон для связи с вами во время конференции (с кодом страны)
       proposition: Так как свободное ПО создаётся сообществом с привлечением множества
         добровольцев, расскажите, пожалуйста, что Вы могли бы привнести в нашу встречу.
@@ -246,6 +244,7 @@ ru:
         необходимости
       add_comment: Добавить комментарий
       authors: Авторы
+      authorship: Авторство
       body: Основной текст тезисов
       change_summary: Изменения в этой версии можно описать как
       conference: Конференция
@@ -256,9 +255,12 @@ ru:
       initial_version: Первоначальная версия
       license: Текст лицензирован под
       list: Тезисы к рассмотрению
+      list_published: Опубликованные
+      list_review: Тезисы к рассмотрению
       list_selection: Список тезисов
       list_user: Ваши тезисы
       new: Создание тезисов
+      published: Опубликованные
       ready_for_review: Эти тезисы готовы к рассмотрению
       summary: Аннотация (на английском, рекомендуемый размер не более 500 символов)
       title: Заголовок
@@ -297,8 +299,9 @@ ru:
       time_ago: "%{time} назад"
       translate: Перевести
       unknown_user: Неизвестно
+      unpublish: Отменить публикацию
       update: Обновить
-      upload: Закачать
+      upload: Закачать пользователя ;)
       view_changes: Изменения
       _select_: Выберите
     conference:
@@ -319,17 +322,28 @@ ru:
       upcoming: Ближайшие конференции
     conference_registration:
       abstracts: Тезисы
+      age: Возраст
+      age_list:
+        65_and_older: 65 и старше
       approved_edit: Подтвердить участие в  %{conference}
       badges: Бэджи
       badges_title: Бэджи для %{conference}
+      buy_ticket: Купить билет
       cancel_registration: Отменить регистрацию
       days: Дни участия
       edit: Анкета участника %{conference}
-      floor: 'Отметьте, если вы планируете жить в палатке и получить скидку в оргвзносе '
+      floor: Отметьте, если вы планируете жить в палатке за скидку в оргвзносе
       food: Предпочтения в диете
       index: Регистрации на конференции
       meeting: Требуется ли встреча?
       phone: Ваш контактный телефон
+      position: Должность
+      position_list:
+        developer/tester: Разработчик / Тестировщик
+        director/business_owner: 'Директор / Владелец бизнеса '
+        manager: Менеджер / Руководитель
+        other: Другое
+        system_administrator: Системный администратор
       proposition: Ваши предложения
       proposition_list: Доклад
       quantity: Количество участников
@@ -482,8 +496,9 @@ ru:
       users: Управление пользователями
     conference:
       about: О конференции
-      attribution: Атрибутика
-      attribution_winter: Атрибутика
+      logos: Атрибутика
+      logos_winter: Атрибутика
+      code_of_conduct: Кодекс поведения
       history: История
       payment: Оплата
       payment_winter: Оплата
@@ -497,6 +512,7 @@ ru:
       organizers: Оргкомитет
       title: Контакты
     editor:
+      abstracts: Тезисы к рассмотрению
       articles: Редактор статей
       image_uploader: Загрузка картинок
       language: Редактор языков
@@ -512,18 +528,20 @@ ru:
       lvee_2012_materials: Материалы LVEE 2012
       lvee_2013_materials: Материалы 2013 года
       lvee_2014_materials: Материалы 2014 года
-      lvee_2015_materials: Материалы LVEE 2015
+      lvee_2015_materials: Материалы 2015 года
       lvee_winter_2014_presentations: Материалы LVEE Winter 2014
-      materials_2005: Материалы LVEE 2005
-      materials_2006: Материалы LVEE 2006
-      materials_2007: Материалы LVEE 2007
-      materials_2008: Материалы LVEE 2008
-      materials_2009: Материалы LVEE 2009
-      materials_2010: Материалы LVEE 2010
-      materials_2011: Материалы LVEE 2011
+      materials_2005: Материалы 2005 года
+      materials_2006: Материалы 2006 года
+      materials_2007: Материалы 2007 года
+      materials_2008: Материалы 2008 года
+      materials_2009: Материалы 2009 года
+      materials_2010: Материалы 2010 года
+      materials_2011: Материалы 2011 года
       materials_2012: Материалы 2012 года
-      materials_2016: Материалы LVEE 2016
-      materials_lvee_winter_2013: Материалы LVEE Winter  2013
+      materials_2016: Материалы 2016 года
+      materials_2018: Материалы 2018 года
+      materials_lvee_winter_2013: Материалы LVEE Winter 2013
+      materials_of_lvee_2017: Материалы 2017 года
       materials_winter_2012: Материалы LVEE Winter 2012
       program: Программа
       title: Доклады
@@ -535,8 +553,12 @@ ru:
       list_14_2: Список
       list_15: Список
       list_16: Список
+      list_2018: Список
       list_winter_16: List
+      list_winter_2018: Список
+      menu_user_list: Список
       profile: Личный профиль
+      spisok: Список
       title: Участники
       volunteers: Волонтёры
       winter_12: Список участников

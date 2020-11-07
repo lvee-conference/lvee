@@ -41,6 +41,8 @@ hu:
           many: "%{model}: a mentés nem sikerült %{count} hiba miatt"
           one: "%{model}: a mentés nem sikerült %{count} hiba miatt"
           other: "%{model}: a mentés nem sikerült %{count} hiba miatt"
+  active_scaffold:
+    are_you_sure: Igaz, ugye?
   date:
     abbr_day_names:
     - Va
@@ -360,9 +362,9 @@ hu:
   menu:
     conference:
       about: A konferenciáról
-      attribution: Impresszum
-      attribution_winter: Impresszum
       history: Történelem
+      logos: Logók
+      logos_winter: Logók
       payment: Payments
       payment_winter: Payments
       place: Helyszín
@@ -378,6 +380,7 @@ hu:
     reports:
       about: Az előadásokról
       abstract: Vázlatírási szabályok
+      lvee_2012_materials: LVEE 2012 anyagai
       lvee_2013_materials: LVEE 2013 anyagai
       lvee_2014_materials: LVEE 2014 anyagai
       lvee_2015_materials: LVEE 2015 anyagai
@@ -392,13 +395,16 @@ hu:
       materials_2012: LVEE 2012 anyagai
       materials_2016: LVEE 2016 anyagai
       materials_lvee_winter_2013: LVEE Winter 2013 anyagai
+      materials_of_lvee_2017: 'LVEE 2017 anyagai '
       materials_winter_2012: LVEE Winter 2012 anyagai
       title: Előadások
     sponsors:
       title: Szponzorok
     user:
       conference_registration: Participants of the Conference
+      list_2018: Logók
       profile: Profil
+      spisok: Logók
   message:
     common:
       access_denied: Hozzáférés megtagadva

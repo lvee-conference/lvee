@@ -19,7 +19,7 @@ en:
         not_a_number: is not a number
         odd: must be odd
         record_invalid: record is invalid
-        should_be_zip: file is not valid zip archive
+        should_be_zip: file is not a valid zip archive
         taken: has already been taken
         too_long: is too long (maximum is %{count} characters)
         too_short: is too short (minimum is %{count} characters)
@@ -27,8 +27,8 @@ en:
       template:
         body: 'There were problems with the following fields:'
         header:
-          one: 1 error prohibited this %{model} from being saved
-          other: "%{count} errors prohibited this %{model} from being saved"
+          one: 1 error prevented this %{model} from being saved
+          other: "%{count} errors prevented this %{model} from being saved"
   active_scaffold:
     are_you_sure: Are you sure?
   date:
@@ -64,8 +64,8 @@ en:
     - Saturday
     formats:
       default: "%Y-%m-%d"
-      long: "%B %d, %Y"
-      short: "%b %d"
+      long: "%d %B %Y"
+      short: "%d %b"
     month_names:
     - ''
     - January
@@ -128,19 +128,17 @@ en:
   description:
     abstract:
       body: "recommended languages are Belarusian, Russian or English;\r\nrecommended
-        size is approximately 6000 symbols or less\r\nYou can use LaTeX, \"Textile\":http://txstyle.org/
+        length is about 6000 characters or less\r\nYou can use LaTeX, \"Textile\":http://txstyle.org/
         mark-up or plain text."
       license: (Licenses are explained at "creativecommons.org":http://creativecommons.org/choose)
       license_line: Abstract licensed under %{license} license
     conference_registration:
       days: Which days do you plan to participate?
-      floor: "Some LVEE participants prefer to live in tents instead of traditional
-        rooms, to get more clear touring experience. Living in tent also results in
-        much smaller registration fee. Please visit \r\n\"tents\":https://lvee.org/ru/wiki_pages/%5B2016%5D%20%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%BA%D0%B8
-        webpage for details."
-      food: Which type of food do you prefer (vegetarian, etc.)
+      floor: Some LVEE participants who have tourist experience prefer to stay in
+        their own tents. They pay only half of the participation fee in this case.
+      food: Food preferences (vegetarian, vegan, gluten-free etc.)
       index: Registration to conference
-      meeting: Would you like to be met?
+      meeting: Would you like us to meet you?
       menu:
         delete_children_forbidden: You can't delete disabled menu item. Disable it
           first
@@ -154,23 +152,23 @@ en:
         organisation. If you are going to make a report or organise a workshop at
         the conference, please specify the topic of your report, as well as submit
         its abstracts.
-      quantity: How many people will go with you to the conference (including you)
-      residence: Whom of the registered participants you want to share room with?
+      quantity: How many people will attend the conference  (including yourself)
+      residence: Would you like to share your room with someone specific?
       title: Conference registration for %{conference}
-      transport_from: Which transport will you use to leave the conference
-      transport_to: Which transport will you use to reach the conference
+      transport_from: How would you like to depart from the conference?
+      transport_to: How would you like to arrive at the conference?
       tshirt: Your size of a T-shirt (should be of the same size as hoody)
     user:
       city: ''
-      country: Where are you from
+      country: The country you call home
       email: Your e-mail
       first_name: ''
-      last_name: Conference rules are requiring real names
+      last_name: You can choose what appears on the badge later
       login: At least 3 symbols. Also can be used as nickname
       occupation: Place of work/study and area of activities (with short organization
         name)
       password: At least 4 symbols
-      password_confirmation: Same as password
+      password_confirmation: Repeat the password
       projects: Free / Open Source Software (FOSS) projects where you have taken or
         are taking part in and your role in them
       subscribed: This option allows to receive news and other useful information
@@ -189,11 +187,11 @@ en:
         in a few minutes.
     failure:
       already_authenticated: You are already signed in.
-      inactive: Your account was not activated yet.
+      inactive: Your account has not yet been activated.
       invalid: Invalid email or password.
       invalid_token: Invalid authentication token.
       locked: Your account is locked.
-      timeout: Your session expired, please sign in again to continue.
+      timeout: Your session has expired, please sign in again to continue.
       unauthenticated: You need to sign in or sign up before continuing.
       unconfirmed: You have to confirm your account before continuing.
     mailer:
@@ -214,11 +212,11 @@ en:
         reset your password in a few minutes.
       send_paranoid_instructions: If your email address exists in our database, you
         will receive a password recovery link at your email address in a few minutes.
-      updated: Your password was changed successfully. You are now signed in.
-      updated_not_active: Your password was changed successfully.
+      updated: Your password has been updated. You are now signed in.
+      updated_not_active: Your password has been updated.
     registrations:
-      destroyed: Bye! Your account was successfully cancelled. We hope to see you
-        again soon.
+      destroyed: Your account has been successfully deleted. We are very sad to see
+        you go. Hopefully, you'll come back one day.
       signed_up: Welcome! You have signed up successfully.
       signed_up_but_inactive: You have signed up successfully. However, we could not
         sign you in because your account is not yet activated.
@@ -226,10 +224,10 @@ en:
         sign you in because your account is locked.
       signed_up_but_unconfirmed: A message with a confirmation link has been sent
         to your email address. Please open the link to activate your account.
-      updated: You updated your account successfully.
-      update_needs_confirmation: You updated your account successfully, but we need
-        to verify your new email address. Please check your email and click on the
-        link to confirm your new email address.
+      updated: Your account has been updated.
+      update_needs_confirmation: Your account has been updated. We need to verify
+        your new email address. Please check your email and click on the link to confirm
+        your new email address.
     sessions:
       signed_in: Signed in successfully.
       signed_out: Signed out successfully.
@@ -253,22 +251,24 @@ en:
   label:
     abstract:
       additional_files: Images or other files can be uploaded here, if needed
-      add_comment: Add Comment
+      add_comment: Add a comment
       add_editors: Add more editors
       authors: Authors
+      authorship: Authorship
       body: Abstracts main body
       change_summary: Changes in this version can be described as
       conference: Conference
       create_new: Create new abstracts
-      edit: Abstracts editing
+      edit: Edit abstracts
       editors: Participants who are able to edit the text
       for_review: For review
       initial_version: Initial version
       license: License
       list: Abstracts for review
       list_publish: Published abstracts
+      list_published: Published
       list_review: Abstracts for review
-      list_selection: 'List abstracts:'
+      list_selection: 'Show only abstracts:'
       list_user: Your abstracts
       new: Abstracts creating
       published: Published
@@ -277,17 +277,17 @@ en:
       title: Title
       updated_at: Last Modified
       user: User
-      yourself: Yourself
+      yourself: Submitted by you
     article:
-      body: Body
+      body: Text
       category: Category
-      creating: Creating Article
-      editing: Editing Article
+      creating: New article
+      editing: Edit the article
       in_menu: In menu?
-      listing: Listing Articles
+      listing: All articles
       locale: Locale
       name: Name
-      new: New Article
+      new: New article
       title: Title
     badge:
       bottom: Bottom
@@ -306,7 +306,7 @@ en:
       diff: Diff
       download: Download
       edit: Edit
-      editTranslation: Edit translation
+      editTranslation: Edit the translation
       preview: Preview
       publish: Publish
       publish_now: Publish Now
@@ -317,43 +317,56 @@ en:
       time_ago: "%{time} ago"
       translate: Translate
       unknown_user: Unknown
+      unpublish: Unpublish
       update: Update
       upload: Upload
       view_changes: View changes
       _select_: Select
     conference:
-      available: You can participate following conferences
-      creating: Creating conference
+      available: You can participate in the following conferences
+      creating: New conference
       finish_date: Finish date
-      listing: Listing conferences
+      listing: All conferences
       name: Name
       new: New conference
       participated: You have participated
       register: Register to %{conference}
       registration_closed: closed
-      registration_opened: opened
+      registration_opened: open
       registration_opened?: Registration opened?
-      registred: You have registred
+      registred: You have registered
       show: Conference %{name} (%{start_date} - %{finish_date}
       start_date: Start date
       upcoming: Upcoming conferences
     conference_registration:
       abstracts: Abstracts
+      age: Age
+      age_list:
+        65_and_older: 65 or older
       approved_edit: Confirm participation in %{conference}
-      badges: Badges
+      badges: Badges for %{conference}
       badges_title: Badges for %{conference}
+      buy_ticket: Buy ticket
       cancelled: Cancelled
       cancel_registration: Cancel registration!
       comment: Registration's Comment
       created_at: Conference Registration Date
       days: Participation days
       edit: " %{conference} participant's data"
-      floor: Please mark if you would like to live in a tent with decreased participation
-        fee
+      floor: Please mark if you would like to live in a tent for a discount in the
+        organization fee
       food: Preferred food
       index: Registration to conference
       meeting: Meeting required?
       phone: Your contact phone
+      position: Position
+      position_list:
+        developer/tester: Developer / QA
+        devops: DevOps
+        director/business_owner: Director / Owner
+        manager: Manager / Сhief executive
+        other: Other
+        system_administrator: System administrator
       proposition: Your proposition
       proposition_list: Report
       quantity: Participants quantity
@@ -394,10 +407,10 @@ en:
       wiki_page_created: Wiki page %{obj} was created by %{user}
     language:
       code3: 3-letter (ISO 639-2) language code id
-      creating: Creating Language
-      editing: Editing Language
+      creating: New language
+      editing: Edit the language
       id: 2-letter language id
-      listing: Listing Languages
+      listing: All languages
       name: Full language name (in English)
       new: New Language
       published: Language published?
@@ -410,20 +423,20 @@ en:
       all_news: All News
       author: Author
       back_to_list: Back to news list
-      body: News Body
-      creating: News Creating
-      editing: News Editing
+      body: Main text
+      creating: Add a news item
+      editing: Edit the news item
       last_news: Last News
       publish: Publish News
-      published_at: Published at %{published}
+      published_at: Published on %{published}
       title: Title
       translating: News Translation
       unpublished: Unpublished
-      will_be_published: Will be published in %{published}
+      will_be_published: Will be published on %{published}
     session:
       login: User name
       loginButton: Log in
-      logout: Logout
+      logout: Log out
       password: Password
       rememberMe: Remember me
     statistics:
@@ -437,7 +450,7 @@ en:
         days_title: Participance days statistics
         registration_title: Registration statistics
         total_men: Total participants
-        total_registrations: Total registration
+        total_registrations: Total registrations
         transport_from_title: Transport from conference statistics
         transport_to_title: Transport to conference statistics
       title:
@@ -451,7 +464,7 @@ en:
         week: Statistics for last week
       visits: Visits
     translations:
-      edit: Editing translation
+      edit: Edit the translation
       index: Translations list
       key: Key
       new: New Translation
@@ -469,11 +482,11 @@ en:
       created_at: Registration Date
       edit: Edit personal data
       email: E-mail
-      first_name: First Name
+      first_name: First name
       from: From
       full_name: Name
       join_us: Join us today
-      last_name: Last Name
+      last_name: Last name
       login: Login
       occupation: Occupation
       password: Password
@@ -483,17 +496,17 @@ en:
       photo: Photo
       projects: FOSS projects
       register: Register
-      subscribed: Subscribe to information maillist
-      subscribed_talks: Subscribe to organization board talks mailllist
+      subscribed: Subscribe to the announcements mailing list
+      subscribed_talks: Subscribe to the discussion mailing list
       title: "%{full_name} (%{login}), your profile is in your hands"
       to_profile: To your profile
-      updated_at: Last Updated
+      updated_at: Last modified
       update_model: Edit your personal data
     wiki_page:
-      body: Body
-      creating: Creating Wiki Page
-      editing: Editing Wiki Page
-      listing: Listing Wiki Pages
+      body: Text
+      creating: New wiki page
+      editing: Edit the wiki page
+      listing: All wiki pages
       name: Name
       new: New Wiki Page
       user: Last Editor
@@ -502,12 +515,10 @@ en:
       activate: |-
         Please visit following URL for activation your account:
         %{url}
-      activated: Your account was been activated
-      activation_restore: You account should be activated before login
-      created: Your account was been created
-      edit_data: |-
-        You can login and edit your data:
-        %{url}
+      activated: Your account has been activated
+      activation_restore: Your account should be activated before you can log in
+      created: Your account has been created
+      edit_data: "You can log in and edit your profile:\r\n%{url}"
       information: |-
         Login:    %{login}
         Password: %{password}
@@ -531,18 +542,18 @@ en:
       info_mailer: Mailer from info@lvee.org
       menus: Menu editor
       not_found_redirects: Moved pages redirects
-      sites: Style customization
+      sites: Style customisation
       sponsors: Sponsors admin
       statuses: Statuses admin
       title: Admin
       users: Users admin
     conference:
       about: About
-      attributes: Attributes
-      attribution: Attributes
-      attribution_winter: Attribution
+      code_of_conduct: Code of Conduct
       history: History
       linux: GNU/Linux
+      logos: Logos
+      logos_winter: Logos
       payment: Payment
       payment_winter: Payment
       place: Conference venue
@@ -553,7 +564,7 @@ en:
     contacts:
       lug: LUG
       official: Official Contacts
-      organizers: Organization Board
+      organizers: Organisers
       title: Contacts
     edit:
       delete: Delete
@@ -588,8 +599,10 @@ en:
       materials_2010: LVEE 2010 materials
       materials_2011: LVEE 2011 materials
       materials_2012: LVEE 2012 materials (with Winter)
-      materials_2016: LVEE 2016 materials
+      materials_2016: LVEE 2016 materials (with Winter)
+      materials_2018: LVEE 2018 materials (with Winter)
       materials_lvee_winter_2013: LVEE Winter 2013 materials
+      materials_of_lvee_2017: LVEE 2017 materials
       materials_winter_2012: LVEE Winter 2012 materials
       program: Programme
       title: Presentations
@@ -602,8 +615,13 @@ en:
       list_14_2: List
       list_15: List
       list_16: List
+      list_2017: List
+      list_2018: List
       list_winter_16: List
+      list_winter_2018: List
+      menu_user_list: List
       profile: Personal profile
+      spisok: List
       title: Participants
       volunteers: Volunteers
       wiki: Wiki

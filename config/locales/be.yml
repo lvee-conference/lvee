@@ -132,8 +132,8 @@ be:
     conference_registration:
       days: У якія дні вы плануеце ўзяць удзел у канферэнцыі?
       floor: Некаторыя ўдзельнікі LVEE аддаюць перавагу намётам, а не дамкам турбазы.
-        Акрамя яскравых турыстычных уражанняў, гэта дае і зніжку 50% з арганізацыйнага
-        ўнёску. Наведайце старонку "намёты":https://lvee.org/ru/wiki_pages/%5B2016%5D%20%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%BA%D0%B8,
+        Акрамя яскравых турыстычных уражанняў, гэта дае і зніжку з арганізацыйнага
+        ўнёску. Наведайце старонку "намёты":https://lvee.org/ru/wiki_pages/%5B2017%5D%20%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%BA%D0%B8,
         каб даведацца больш.
       food: Якой ежы вы аддаяце перавагу?
       index: Рэгістрацыя на канферэнцыю
@@ -259,6 +259,7 @@ be:
       approved_edit: Пацвердзьце свой удзел у %{conference}
       badges: Значкі
       badges_title: Значкі на %{conference}
+      buy_ticket: Набыць квiток
       cancel_registration: Cancel registration
       days: Дні ўдзелу
       edit: Звесткі пра ўдзельніка %{conference}
@@ -428,8 +429,9 @@ be:
       users: Адміністратар карыстальнікаў
     conference:
       about: Канферэнцыя
-      attribution: Атрыбутыка
-      attribution_winter: Атрыбутыка
+      logos: Атрыбутыка
+      logos_winter: Атрыбутыка
+      code_of_conduct: Нормы паводзін
       history: Гісторыя
       payment: Аплата
       payment_winter: Аплата
@@ -481,8 +483,12 @@ be:
       list_14_2: Спiс
       list_15: Спiс
       list_16: Спiс
+      list_2018: Спiс
       list_winter_16: Спiс
+      list_winter_2018: Спiс
+      menu_user_list: Спiс
       profile: Профіль
+      spisok: Спiс
       title: Удзельнiкi
       volunteers: Валантэры
       winter_12: Спiс
